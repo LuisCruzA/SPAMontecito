@@ -1,3 +1,8 @@
+---
+import HeaderMobil from "../components/Header/HeaderMobil.astro";
+import BottomNavBar from "../components/Navigation/BottomNavBar.astro";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -9,7 +14,11 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<header>
+			<HeaderMobil/>
+		</header>
 		<slot />
+		<BottomNavBar/>
 	</body>
 </html>
 
