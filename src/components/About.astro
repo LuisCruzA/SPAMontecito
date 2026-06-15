@@ -1,22 +1,19 @@
-<section id="acerca" class="relative w-full h-screen min-h-150 overflow-hidden bg-white md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+---
+import { Image } from 'astro:assets';
+import purificadora from '../assets/purificadora.png'
+---
+<section id="acerca" class="relative px-6 py-22 w-full h-auto min-h-150 overflow-hidden bg-[#F6EFE8] md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
 
-    <div class="h-80 py-4 mt-10 ">
-		<div class="w-full h-full bg-gray-100 grid grid-cols-2 p-4 items-center justify-center	">
-			<div class="flex justify-center">
-				<p>hola</p>
-			</div>
-			<div class="flex justify-center">
-				<p>hola</p>
-			</div>
-			<div class="flex justify-center">
-				<p>hola</p>
-			</div>
-			<div class="flex justify-center">
-				<p>hola</p>
-			</div>
+    
+		<p class="text-sm text-[#2A5082] font-sans font-semibold leading-relaxed mb-6">ACERCA DE NOSOTROS</p>
 
-		</div>
+		<h2 class="text-3xl text-[#1A1A1A] font-serif font-bold mb-8 ">Conoce a Agua El Montecito y nuestra historia.</h2>
 
-  </div>
+		<p class="text-base text-[#666666] font-sans mb-6 font-normal leading-relaxed ">Agua El Montecito es una empresa familiar oaxaqueña fundada en 2010, con la misión de llevar agua potable de calidad a quienes más la necesitan. Durante más de una década, hemos atendido con responsabilidad a hogares, empresas y eventos especiales, cuidando cada detalle del proceso: desde la recolección y el transporte, hasta la entrega directa en tu domicilio, garantizando siempre limpieza, seguridad y volumen completo.</p>
+
+		<p class="text-base text-[#666666] font-sans mb-6 font-normal leading-relaxed">Nos enorgullece tener raíces fuertes en nuestra comunidad, guiándonos por valores que reflejan nuestra cultura: respeto, honestidad y trabajo en equipo. Más que un servicio, queremos brindarte la tranquilidad de saber que cuentas con una empresa que realmente se preocupa por ti. En El Montecito, cada cliente es parte de nuestra historia; gracias por confiar en nosotros.</p>
+
+		<Image src={purificadora} alt="Instalaciones de purificadora" class="w-full rounded-lg shadow-md" />
+	<hr class="border-t border-gray-300 my-8" />
 
 </section>
