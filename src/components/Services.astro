@@ -1,7 +1,78 @@
-<section id="servicios" class="relative w-full h-screen min-h-150 overflow-hidden bg-white md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+---
 
-    <div>
-        <p>aca iran los servicios</p>
+import ServiceCard from './ServiceCard.astro';
+
+interface ServiceItem {
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  iconType: 'agua' | 'domicilio' | 'calidad' | 'sustentable';
+}
+
+const services: ServiceItem[] = [
+  {
+    title: "Agua Purificada",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    imageSrc: "/src/assets/servicio-agua.jpg", 
+    imageAlt: "Agua para consumo humano, purificada y de alta calidad",
+    iconType: "agua"
+  },
+  {
+    title: "Entrega a Domicilio",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    imageSrc: "/src/assets/servicio-agua.jpg",
+    imageAlt: "Servicio de entrega a domicilio",
+    iconType: "domicilio"
+  },
+  {
+    title: "Certificación de Calidad",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    imageSrc: "/src/assets/servicio-agua.jpg", 
+    imageAlt: "Certificación de calidad",
+    iconType: "calidad"
+  },
+  {
+    title: "Envases Sustentables",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    imageSrc: "/src/assets/servicio-agua.jpg",
+    imageAlt: "Envases sustentables y ecológicos",
+    iconType: "sustentable"
+  }
+];
+---
+
+<section class="bg-[#FFFFFF] py-16 px-4 sm:px-6 lg:py-24 lg:px-8" aria-labelledby="services-heading">
+  <div class="mx-auto max-w-7xl">
+    
+    <div class="mb-12 md:mb-16 max-w-2xl text-left">
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#2A5082] font-sans block mb-3">
+        Nuestros Servicios
+      </span>
+      
+      <h2 id="services-heading" class="text-4xl sm:text-5xl font-bold text-[#1A1A1A] font-serif tracking-tight leading-none">
+        Lo que hacemos <br />
+        <span class="text-[#8A8A8A] italic font-normal inline-block mt-1">por ti</span>
+      </h2>
+      
+      <p class="mt-6 text-lg text-[#666666] font-sans leading-relaxed max-w-xl">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+      </p>
     </div>
 
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {
+        services.map((service) => (
+          <ServiceCard
+            title={service.title}
+            description={service.description}
+            imageSrc={service.imageSrc}
+            imageAlt={service.imageAlt}
+            iconType={service.iconType}
+          />
+        ))
+      }
+    </div>
+
+  </div>
 </section>
