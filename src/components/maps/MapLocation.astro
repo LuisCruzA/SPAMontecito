@@ -1,0 +1,19 @@
+---
+// src/components/MapLocation.astro
+const mapUrl = "https://maps.google.com/maps?q=17.089122,-96.688485&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+---
+
+<section class="flex justify-center  -mt-10 py-12 px-4">
+  <!-- Contenedor del mapa: se quitaron los títulos y se ajustó la altura/proporción -->
+  <div class="w-full max-w-4xl h-96 sm:h-137.5 rounded-xl overflow-hidden shadow-sm border border-gray-300">
+    <!-- El iframe del mapa -->
+    <iframe 
+      src={mapUrl}
+      class="w-full h-full border-0"
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación en San Agustín Yatareni">
+    </iframe>
+  </div>
+</section>
