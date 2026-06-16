@@ -1,7 +1,106 @@
-<section id="ubicacion" class="relative w-full h-screen min-h-150 overflow-hidden bg-white md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+---
+import { Icon } from "astro-icon/components";
+import MapLocation from "./maps/MapLocation.astro";
+---
 
-    <div>
-        <p >aca ira la ubicacion</p>
+<section id="ubicacion" class="relative px-6 py-22 w-full h-auto min-h-150 overflow-hidden bg-[#F6EFE8] md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+
+    <p class="text-sm text-[#2A5082] font-sans font-semibold leading-relaxed mb-6">DÓNDE ENCONTRARNOS</p>
+
+    <h2 class="text-3xl text-[#1A1A1A] font-serif font-bold mb-8 ">Nuestra <br>Ubicación</h2>
+
+    <div class="flex flex-col gap-8 ">
+
+        <!-- Direccion -->
+        <div class="flex gap-4 ">
+
+            <div class="flex items-center justify-center w-10 h-10 bg-[#2A5082]/10 rounded-full shrink-0">
+            <Icon name="lucide:map-pin" class="w-5 h-5 text-[#2A5082] " />
+                </div>
+            <div>
+                <p class="text-sm text-[#A1A7B0] font-sans ">DIRECCIÓN</p>
+                <p class="text-base text-[#666666] font-sans  font-normal leading-relaxed">Reforma 4, San Agustin Yatareni <br>C.P 68290, Oaxaca de Juárez, México</p>
+            </div>
+
+        </div>
+
+        <!-- Telefono -->
+
+        <div class="flex gap-4 ">
+
+            <div class="flex items-center justify-center w-10 h-10 bg-[#2A5082]/10 rounded-full shrink-0">
+            <Icon name="lucide:phone" class="w-5 h-5 text-[#2A5082] " />
+                </div>
+            <div>
+                <p class="text-sm text-[#A1A7B0] font-sans ">TÉLEFONO</p>
+<p id="phone-container" class="text-base text-[#666666] font-sans font-normal leading-relaxed">Cargando...</p>            </div>
+
+        </div>
+
+        <!-- Correo -->
+        <div class="flex gap-4 ">
+
+            <div class="flex items-center justify-center w-10 h-10 bg-[#2A5082]/10 rounded-full shrink-0">
+            <Icon name="lucide:mail" class="w-5 h-5 text-[#2A5082] " />
+                </div>
+            <div>
+                <p class="text-sm text-[#A1A7B0] font-sans ">CORREO ELECTRÓNICO</p>
+<p id="email-container" class="text-base text-[#666666] font-sans font-normal leading-relaxed">Cargando...</p>
+            </div>
+
+        </div>
     </div>
 
+   <div class="border border-gray-300 rounded-md p-4 mt-8 mb-8 w-full">
+    
+    <p class="text-sm text-[#A1A7B0] font-sans font-semibold tracking-wide mb-3">
+        HORARIO DE ATENCIÓN
+    </p>
+
+    <div class="flex flex-col gap-1">
+        <p class="text-base text-[#666666] font-sans font-normal">
+            Lun – Sab: 8:00 – 18:00 hrs
+        </p>
+        
+    </div>
+
+</div>
+
+<MapLocation/>
+
+
+
 </section>
+
+<!-- Lógica de ofuscación para Astro -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // --- Ofuscación del Correo ---
+        const emailUser = "aguaelmontecito";
+        const emailDomain = "hotmail.com";
+        const emailElement = document.getElementById("email-container");
+        
+        if (emailElement) {
+            // Unimos las partes y creamos el enlace mailto
+            const fullEmail = `${emailUser}@${emailDomain}`;
+            emailElement.innerHTML = `<a href="mailto:${fullEmail}" class="hover:underline transition-all">${fullEmail}</a>`;
+        }
+
+        // --- Ofuscación del Teléfono ---
+        // Separamos el número en partes lógicas
+        const code = "+52";
+        const area = "951";
+        const part1 = "209";
+        const part2 = "6395";
+        const phoneElement = document.getElementById("phone-container");
+
+        if (phoneElement) {
+            // Formato visual para el usuario: +52 (951) 209 6395
+            const visualPhone = `${code} (${area}) ${part1} ${part2}`;
+            // Formato limpio para el enlace (sin espacios ni paréntesis): +529512096395
+            const linkPhone = `${code}${area}${part1}${part2}`;
+            
+            phoneElement.innerHTML = `<a href="tel:${linkPhone}" class="hover:underline transition-all">${visualPhone}</a>`;
+        }
+    });
+</script>
