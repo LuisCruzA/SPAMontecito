@@ -2,44 +2,9 @@
 
 import ServiceCard from './ServiceCard.astro';
 
-interface ServiceItem {
-  title: string;
-  description: string;
-  imageSrc: string;
-  imageAlt: string;
-  iconType: 'agua' | 'domicilio' | 'calidad' | 'sustentable';
-}
+import { servicesData } from '../data';
 
-const services: ServiceItem[] = [
-  {
-    title: "Agua Purificada",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageSrc: "/src/assets/garrafon.png", 
-    imageAlt: "Agua para consumo humano, purificada y de alta calidad",
-    iconType: "agua"
-  },
-  {
-    title: "Entrega a Domicilio",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageSrc: "/src/assets/pipa.jpeg",
-    imageAlt: "Servicio de entrega a domicilio",
-    iconType: "domicilio"
-  },
-  {
-    title: "Certificación de Calidad",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageSrc: "/src/assets/servicio-agua.jpg", 
-    imageAlt: "Certificación de calidad",
-    iconType: "calidad"
-  },
-  {
-    title: "Envases Sustentables",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageSrc: "/src/assets/servicio-agua.jpg",
-    imageAlt: "Envases sustentables y ecológicos",
-    iconType: "sustentable"
-  }
-];
+
 ---
 
 <section class="bg-[#FFFFFF] py-16 px-4 sm:px-6 lg:py-24 lg:px-8" aria-labelledby="services-heading">
@@ -62,7 +27,7 @@ const services: ServiceItem[] = [
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
       {
-        services.map((service) => (
+        servicesData.map((service) => (
           <ServiceCard
             title={service.title}
             description={service.description}

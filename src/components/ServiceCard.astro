@@ -1,5 +1,5 @@
 ---
-interface Props {
+export interface Props {
   title: string;
   description: string;
   imageSrc: string;
@@ -15,7 +15,9 @@ const { title, description, imageSrc, imageAlt, iconType } = Astro.props;
     <img 
       src={imageSrc} 
       alt={imageAlt} 
-      class="h-full w-full object-cover object-center aspect-4/3 opacity-80 transition-all duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
+      class="h-full w-full object-cover object-center aspect-4/3 opacity-80 transition-all duration-500 ease-out 
+             group-hover:scale-105 group-hover:opacity-100
+             group-active:scale-105 group-active:opacity-100"
       loading="lazy"
     />
   </div>
