@@ -1,4 +1,6 @@
-export const servicesData = [
+import type {Props as ServiceProps} from './components/ServiceCard.astro'
+
+export const servicesData : ServiceProps[] = [
   {
     title: "Agua Puriwficada",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -27,4 +29,4 @@ export const servicesData = [
     imageAlt: "Envases sustentables y ecológicos",
     iconType: "sustentable"
   }
-] as const ;
+] ;
