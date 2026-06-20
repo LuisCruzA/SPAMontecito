@@ -4,15 +4,52 @@ import BottomNavBar from "../components/Navigation/BottomNavBar.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es-MX">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<link rel="icon" href="/icon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>El Montecito</title>
-	</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/icon.png" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- 1. SEO Básico -->
+    <title>El Montecito :: Pipas de agua y Maquinaria pesada Oaxaca</title>
+    <!-- Se llenó la descripción para que no esté vacía -->
+    <meta name="description" content="Servicio rápido de venta y distribución de botellones y pipas de agua. Renta de maquinaria pesada, retroexcavadoras, volteo y acarreo de materiales en Oaxaca." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1a56db" /> <!-- Cambia el #1a56db por el color principal de tu web -->
+
+    <!-- 2. Open Graph (Vistas previas en WhatsApp, Facebook, etc.) -->
+    <meta property="og:type" content="website" />
+    <!-- IMPORTANTE: Cambia "tu-proyecto.vercel.app" por la URL real que te dé Vercel -->
+    <meta property="og:url" content="https://tu-proyecto.vercel.app/" />
+    <meta property="og:title" content="El Montecito :: Pipas de agua y Maquinaria pesada Oaxaca" />
+    <meta property="og:description" content="Venta y distribución de botellones y pipas de agua. Renta de maquinaria pesada y acarreo en Oaxaca." />
+    <!-- IMPORTANTE: Asegúrate de tener una imagen llamada portada.jpg en tu carpeta public/ -->
+    <meta property="og:image" content="public/volteo.jpg" />
+
+    <!-- 3. Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="El Montecito" />
+    <meta name="twitter:description" content="Distribución de agua potable y renta de maquinaria pesada en Oaxaca." />
+    <meta name="twitter:image" content="public/volteo.jpg" />
+
+    <!-- 4. Datos Estructurados (JSON-LD para Google y SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Agua El Montecito",
+      "foundingDate": "2010",
+      "description": "Venta y distribución de botellones y pipas de agua. Renta de maquinaria pesada, retroexcavadora, volteo y acarreo de materiales en Oaxaca.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oaxaca",
+        "addressRegion": "Oax",
+        "addressCountry": "MX"
+      }
+    }
+    </script>
+</head>
 	<body>
 		<header>
 			<HeaderMobil/>

@@ -3,12 +3,14 @@ import { defineConfig } from 'astro/config';
 import icon from 'astro-icon'; // <-- Importación corregida
 import tailwindcss from '@tailwindcss/vite';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  integrations: [
-    icon() // <-- Sin el punto y coma
-  ],  
+  integrations: [// <-- Sin el punto y coma
+  icon(), sitemap()],  
+  site:'https://montecito-temporal.com'
 });
