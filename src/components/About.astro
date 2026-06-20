@@ -1,64 +1,48 @@
 ---
-
 import { Icon } from 'astro-icon/components';
 ---
-<section id="acerca" class="relative px-6 py-22  w-full h-auto min-h-150 overflow-hidden bg-[#F6EFE8] md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+<section id="acerca" class="relative px-6 py-22 w-full h-auto min-h-150 overflow-hidden bg-[#F6EFE8] md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8 lg:h-auto lg:w-full lg:max-w-none lg:mx-0 lg:rounded-none lg:my-0 lg:px-[8vw] lg:py-28 lg:block">
 
-    
-		<p class="text-sm text-[#2A5082] font-sans font-semibold leading-relaxed mb-6">ACERCA DE NOSOTROS</p>
+    <p class="text-sm text-[#2A5082] font-sans font-semibold leading-relaxed mb-6 lg:w-[60%] lg:tracking-[0.15em] lg:uppercase lg:mb-4 lg:block">ACERCA DE NOSOTROS</p>
 
-		<h2 class="text-3xl text-[#1A1A1A] font-serif font-bold mb-8 ">Conoce a Agua El Montecito y nuestra historia.</h2>
+    <h2 class="text-3xl text-[#1A1A1A] font-serif font-bold mb-8 lg:w-[60%] lg:text-5xl lg:leading-tight lg:mb-8 lg:pr-6">Conoce a Agua El Montecito y nuestra historia.</h2>
 
-		<p class="text-base text-[#666666] font-sans mb-6 font-normal leading-relaxed ">Agua El Montecito es una empresa familiar oaxaqueña fundada en 2010, con la misión de llevar agua potable de calidad a quienes más la necesitan. Durante más de una década, hemos atendido con responsabilidad a hogares, empresas y eventos especiales, cuidando cada detalle del proceso: desde la recolección y el transporte, hasta la entrega directa en tu domicilio, garantizando siempre limpieza, seguridad y volumen completo.</p>
+    <p class="text-base text-[#666666] font-sans mb-6 font-normal leading-relaxed lg:w-[60%] lg:text-base lg:mb-6 lg:pr-6">Agua El Montecito es una empresa familiar oaxaqueña fundada en 2010, con la misión de llevar agua potable de calidad a quienes más la necesitan. Durante más de una década, hemos atendido con responsabilidad a hogares, empresas y eventos especiales, cuidando cada detalle del proceso: desde la recolección y el transporte, hasta la entrega directa en tu domicilio, garantizando siempre limpieza, seguridad y volumen completo.</p>
 
-		<p class="text-base text-[#666666] font-sans mb-6 font-normal leading-relaxed">Nos enorgullece tener raíces fuertes en nuestra comunidad, guiándonos por valores que reflejan nuestra cultura: respeto, honestidad y trabajo en equipo. Más que un servicio, queremos brindarte la tranquilidad de saber que cuentas con una empresa que realmente se preocupa por ti. En El Montecito, cada cliente es parte de nuestra historia; gracias por confiar en nosotros.</p>
+    <p class="text-base text-[#666666] font-sans mb-6 font-normal leading-relaxed lg:w-[60%] lg:text-base lg:mb-10 lg:pr-6">Nos enorgullece tener raíces fuertes en nuestra comunidad, guiándonos por valores que reflejan nuestra cultura: respeto, honestidad y trabajo en equipo. Más que un servicio, queremos brindarte la tranquilidad de saber que cuentas con una empresa que realmente se preocupa por ti. En El Montecito, cada cliente es parte de nuestra historia; gracias por confiar en nosotros.</p>
 
-		<img src={'src/assets/purificadora.png'} alt="Instalaciones de purificadora" class="w-full rounded-md mb-8 shadow-sm" />
+    <img src={'src/assets/purificadora.png'} alt="Instalaciones de purificadora" class="w-full rounded-md mb-8 shadow-sm lg:absolute lg:right-[8vw] lg:top-28 lg:h-[calc(100%-14rem)] lg:w-[34%] lg:object-cover lg:mb-0 lg:rounded-sm lg:shadow-md" />
 
-	<hr class="border-t border-gray-300 mb-8" />
+    <hr class="border-t border-gray-300 mb-8 lg:w-[60%] lg:mb-8 lg:mt-4 lg:border-gray-400/50 lg:pr-6" />
 
-	<div class="grid grid-cols-3 gap-2  mb-8 ">
-		<!-- Añños de experoene -->
-		<div class="flex flex-col  items-center text-center gap-1">
-			<div class=" flex items-start ">
-				<p class="text-3xl font-serif font-extrabold text-[#2A5082]">16</p>
-                 <span class="w-6 h-6  text-[#2A5082] text-4xl  font-serif " >+</span>
-			</div>
+    <div class="grid grid-cols-3 gap-2 mb-8 lg:w-[60%] lg:mb-12 lg:gap-6 lg:pr-6">
+        <div class="flex flex-col items-center text-center gap-1 lg:items-start lg:text-left">
+            <div class="flex items-start">
+                <p class="text-3xl font-serif font-extrabold text-[#2A5082] lg:text-4xl">16</p>
+                 <span class="w-6 h-6 text-[#2A5082] text-4xl font-serif lg:text-4xl lg:mt-0">+</span>
+            </div>
+            <p class="text-base text-[#666666] font-sans font-normal leading-tight -mt-1 lg:text-sm lg:mt-1">Años de Experiencia</p>
+        </div>
+        
+        <div class="flex flex-col items-center text-center gap-1 lg:items-start lg:text-left">
+            <div class="flex items-start">
+                <p class="text-3xl font-serif font-extrabold text-[#2A5082] lg:text-4xl">Hoy</p>
+            </div>
+            <p class="text-base text-[#666666] font-sans font-normal leading-tight -mt-1 lg:text-sm lg:mt-1">Servicio el mismo día</p>
+        </div>
 
-			<p class="text-base text-[#666666] font-sans font-normal leading-tight -mt-1">Años de Experiencia</p>
-			
+        <div class="flex flex-col items-center text-center gap-1 lg:items-start lg:text-left">
+            <div class="flex items-start">
+                <p class="text-3xl font-serif font-extrabold text-[#2A5082] lg:text-4xl">99</p>
+                 <span class="w-6 h-6 text-[#2A5082] text-4xl font-serif lg:text-4xl lg:mt-0">%</span>
+            </div>
+            <p class="text-base text-[#666666] font-sans font-normal leading-tight -mt-1 lg:text-sm lg:mt-1">Calidad Certificada</p>
+        </div>
+    </div>
 
-		</div>
-		<!-- Tiempo de entrega -->
-		<div class="flex flex-col items-center text-center gap-1">
-			<div class=" flex items-start ">
-				<p class="text-3xl font-serif font-extrabold text-[#2A5082]">Hoy</p>
-                 <!-- <span class="w-6 h-6  text-[#2A5082] text-4xl -mt-8 font-serif " >+</span> -->
-			</div>
+    <a href="#contacto" class="nav-link flex gap-2 border-b border-[#2A5082] w-max pb-1 items-center lg:mt-2 lg:hover:gap-4 lg:transition-all lg:duration-300">
+        <p class="text-sm text-[#2A5082] font-sans font-semibold lg:text-base">Contáctanos hoy </p>                
+        <Icon name="lucide:arrow-right" class="w-4 h-4 text-sm font-sans mt-1 text-[#2A5082] lg:w-5 lg:h-5" />
+    </a>
 
-			<p class="text-base text-[#666666] font-sans font-normal leading-tight -mt-1">Servicio el mismo día</p>
-			
-
-		</div>
-
-		<!-- calidad -->
-
-		<div class="flex flex-col items-center text-center gap-1">
-			<div class=" flex items-start ">
-				<p class="text-3xl font-serif font-extrabold text-[#2A5082]">99</p>
-                 <span class="w-6 h-6  text-[#2A5082] text-4xl  font-serif " >%</span>
-			</div>
-
-			<p class="text-base text-[#666666] font-sans font-normal leading-tight -mt-1">Calidad Certificada</p>
-			
-
-		</div>
-
-	</div>
-
-	<a href="#contacto" class=" nav-link flex gap-2 border-b border-[#2A5082] w-max pb-1 items-center ">
-	<p class="text-sm text-[#2A5082] font-sans font-semibold">Contáctanos hoy </p>                
-	     <Icon name="lucide:arrow-right" class="w-4 h-4 text-sm font-sans mt-1 text-[#2A5082]" />
-	</a>
-
-</section> 
+</section>

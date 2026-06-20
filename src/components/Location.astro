@@ -3,72 +3,63 @@ import { Icon } from "astro-icon/components";
 import MapLocation from "./maps/MapLocation.astro";
 ---
 
-<section id="ubicacion" class="relative px-6 py-22 w-full h-auto min-h-150 overflow-hidden bg-[#F6EFE8] md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+<section id="ubicacion" class="relative px-6 py-22 w-full h-auto min-h-150 overflow-hidden bg-[#F6EFE8] md:h-auto md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8 lg:h-auto lg:w-full lg:max-w-none lg:mx-0 lg:rounded-none lg:my-0 lg:px-[8vw] lg:py-28 lg:block">
 
-    <p class="text-sm text-[#2A5082] font-sans font-semibold leading-relaxed mb-6">DÓNDE ENCONTRARNOS</p>
+    <p class="text-sm text-[#2A5082] font-sans font-semibold leading-relaxed mb-6 lg:w-[40%] lg:tracking-[0.15em] lg:uppercase lg:mb-4">DÓNDE ENCONTRARNOS</p>
 
-    <h2 class="text-3xl text-[#1A1A1A] font-serif font-bold mb-8 ">Nuestra <br>Ubicación</h2>
+    <h2 class="text-3xl text-[#1A1A1A] font-serif font-bold mb-8 lg:w-[40%] lg:text-5xl lg:leading-tight lg:mb-12">Nuestra <br>Ubicación</h2>
 
-    <div class="flex flex-col gap-8 ">
+    <div class="flex flex-col gap-8 lg:w-[40%] lg:gap-10">
 
         <!-- Direccion -->
-        <div class="flex gap-4 ">
-
+        <div class="flex gap-4">
             <div class="flex items-center justify-center w-10 h-10 bg-[#2A5082]/10 rounded-full shrink-0">
-            <Icon name="lucide:map-pin" class="w-5 h-5 text-[#2A5082] " />
-                </div>
-            <div>
-                <p class="text-sm text-[#A1A7B0] font-sans ">DIRECCIÓN</p>
-                <p class="text-base text-[#666666] font-sans  font-normal leading-relaxed">Reforma 4, San Agustin Yatareni <br>C.P 68290, Oaxaca de Juárez, México</p>
+                <Icon name="lucide:map-pin" class="w-5 h-5 text-[#2A5082]" />
             </div>
-
+            <div>
+                <p class="text-sm text-[#A1A7B0] font-sans">DIRECCIÓN</p>
+                <p class="text-base text-[#666666] font-sans font-normal leading-relaxed lg:mt-1">Reforma 4, San Agustin Yatareni <br>C.P 68290, Oaxaca de Juárez, México</p>
+            </div>
         </div>
 
         <!-- Telefono -->
-
-        <div class="flex gap-4 ">
-
+        <div class="flex gap-4">
             <div class="flex items-center justify-center w-10 h-10 bg-[#2A5082]/10 rounded-full shrink-0">
-            <Icon name="lucide:phone" class="w-5 h-5 text-[#2A5082] " />
-                </div>
+                <Icon name="lucide:phone" class="w-5 h-5 text-[#2A5082]" />
+            </div>
             <div>
-                <p class="text-sm text-[#A1A7B0] font-sans ">TÉLEFONO</p>
-<p id="phone-container" class="text-base text-[#666666] font-sans font-normal leading-relaxed">Cargando...</p>            </div>
-
+                <p class="text-sm text-[#A1A7B0] font-sans">TELÉFONO</p>
+                <p id="phone-container" class="text-base text-[#666666] font-sans font-normal leading-relaxed lg:mt-1">Cargando...</p>            
+            </div>
         </div>
 
         <!-- Correo -->
-        <div class="flex gap-4 ">
-
+        <div class="flex gap-4">
             <div class="flex items-center justify-center w-10 h-10 bg-[#2A5082]/10 rounded-full shrink-0">
-            <Icon name="lucide:mail" class="w-5 h-5 text-[#2A5082] " />
-                </div>
-            <div>
-                <p class="text-sm text-[#A1A7B0] font-sans ">CORREO ELECTRÓNICO</p>
-<p id="email-container" class="text-base text-[#666666] font-sans font-normal leading-relaxed">Cargando...</p>
+                <Icon name="lucide:mail" class="w-5 h-5 text-[#2A5082]" />
             </div>
-
+            <div>
+                <p class="text-sm text-[#A1A7B0] font-sans">CORREO ELECTRÓNICO</p>
+                <p id="email-container" class="text-base text-[#666666] font-sans font-normal leading-relaxed lg:mt-1">Cargando...</p>
+            </div>
         </div>
     </div>
 
-   <div class="border border-gray-300 rounded-md p-4 mt-8 mb-8 w-full">
-    
-    <p class="text-sm text-[#A1A7B0] font-sans font-semibold tracking-wide mb-3">
-        HORARIO DE ATENCIÓN
-    </p>
-
-    <div class="flex flex-col gap-1">
-        <p class="text-base text-[#666666] font-sans font-normal">
-            Lun – Sab: 8:00 – 18:00 hrs
+   <div class="border border-gray-300 rounded-md p-4 mt-8 mb-8 w-full lg:w-[40%] lg:mt-12 lg:mb-0 lg:p-6 lg:border-gray-400/50 lg:bg-[#F6EFE8]/50">
+        <p class="text-sm text-[#A1A7B0] font-sans font-semibold tracking-wide mb-3">
+            HORARIO DE ATENCIÓN
         </p>
-        
+        <div class="flex flex-col gap-1">
+            <p class="text-base text-[#666666] font-sans font-normal">
+                Lun – Sab: 8:00 – 18:00 hrs
+            </p>
+        </div>
     </div>
 
-</div>
-
-<MapLocation/>
-
-
+    <!-- Contenedor del mapa: En móvil respeta el flujo hacia abajo, en desktop se posiciona a la derecha -->
+    <div class="w-full mt-8 lg:mt-0 lg:absolute lg:right-[8vw] lg:top-28 lg:w-[50%] lg:h-[calc(100%-14rem)]">
+        <MapLocation class="w-full h-full object-cover rounded-md shadow-sm" />
+    </div>
 
 </section>
 

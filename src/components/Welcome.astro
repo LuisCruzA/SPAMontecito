@@ -1,4 +1,4 @@
-<section id="inicio" class="relative w-full h-screen min-h-150 overflow-hidden bg-black md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+<section id="inicio" class="relative w-full h-screen min-h-150 overflow-hidden bg-black md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8 lg:h-screen lg:w-full lg:max-w-none lg:mx-0 lg:rounded-none lg:my-0">
     
   <div class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out slide-item opacity-100">
     
@@ -6,31 +6,38 @@
     
     <img 
       src="src/assets/garrafon.png" alt="Fondo de garrafon de agua"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 w-full h-full object-cover md:hidden"
     />
 
-    <div class="relative z-20 flex flex-col justify-center items-start md:items-center h-full px-6 max-w-4xl mx-auto md:px-0">
+    <img 
+      src="src/assets/botella.png" alt="Fondo de garrafon de agua escritorio"
+      class="absolute inset-0 w-full h-full object-cover hidden md:block"
+    />
+
+    <!-- Agregado lg:pt-32 para empujar la info hacia abajo -->
+    <div class="relative z-20 flex flex-col justify-center items-start md:items-center h-full px-6 max-w-4xl mx-auto md:px-0 lg:items-start lg:px-[8vw] lg:w-full lg:max-w-none lg:mx-0 lg:pt-32">
         
-        <div class="md:hidden inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm">
-           <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-           <h2 class="text-sm font-sans md:text-lg font-bold tracking-widest text-white uppercase">
+        <div class="md:hidden lg:flex inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm lg:border-none lg:bg-transparent lg:p-0 lg:mb-6 lg:gap-0">
+           <div class="w-2 h-2 rounded-full bg-blue-500 lg:hidden"></div>
+           <h2 class="text-sm font-sans md:text-lg font-bold tracking-widest text-white uppercase lg:text-xs lg:tracking-[0.25em] lg:text-gray-300">
              Disponible
            </h2>
         </div>
 
-        <h1 class="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight drop-shadow-xl text-left md:text-center w-full">
+        <h1 class="text-white font-serif text-4xl md:text-6xl lg:text-8xl font-extrabold leading-tight drop-shadow-xl text-left md:text-center w-full lg:text-left lg:leading-[1.1] lg:tracking-tight lg:max-w-4xl">
         Bienvenido a Agua <span class="text-[#E8E8E8]/80 italic">El Montecito</span>
         </h1>
 
-        <p class="text-base text-[#E8E8E8]/80 md:text-xl font-sans text-left mb-8 mt-8 max-w-2xl drop-shadow-md  md:text-center md:mx-auto md:w-3/4">
+        <p class="text-base text-[#E8E8E8]/80 md:text-xl font-sans text-left mb-8 mt-8 max-w-2xl drop-shadow-md md:text-center md:mx-auto md:w-3/4 lg:text-left lg:mx-0 lg:w-[45%] lg:leading-relaxed lg:mt-8 lg:mb-10 lg:text-lg">
 Tu mejor opción en distribución de agua potable en pipas.
                 En El Montecito nos especializamos en el suministro confiable, rápido y seguro de agua para hogares, negocios, construcciones y eventos.
                 Con nosotros, el agua nunca faltará.        </p>
 
-        <div class="w-full -mt-4 mb-0 md:w-full md:flex md:flex-row md:items-center md:mt-10 md:gap-6 md:justify-center">
+        <div class="w-full -mt-4 mb-0 md:w-full md:flex md:flex-row md:items-center md:mt-10 md:gap-6 md:justify-center lg:justify-start lg:mt-4">
+            <!-- Agregado lg:w-fit lg:min-w-0 para evitar que se estire -->
             <a 
                 href="#servicios" 
-                class="group w-1/2 min-w1/2 md:w-auto text-sm flex items-center justify-center gap-3 px-6 py-3 bg-[#1E60A4] mt-10 md:mt-0 hover:bg-blue-500 text-[#FFFFFF]  font-sans rounded-3xl transition-all duration-300 hover:scale-105 shadow-lg"
+                class="group w-1/2 min-w-[50%] md:w-auto text-sm flex items-center justify-center gap-3 px-6 py-3 bg-[#1E60A4] mt-10 md:mt-0 hover:bg-blue-500 text-[#FFFFFF] font-sans rounded-3xl transition-all duration-300 hover:scale-105 shadow-lg lg:w-fit lg:min-w-0 lg:px-8 lg:py-3.5"
             >
                 Ver Servicios
             </a>
@@ -38,7 +45,4 @@ Tu mejor opción en distribución de agua potable en pipas.
     </div>
   </div>
 
-
 </section>
-  <!-- Informacion -->
- 
