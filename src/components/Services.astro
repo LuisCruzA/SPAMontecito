@@ -7,25 +7,24 @@ import { servicesData } from '../data';
 
 ---
 
-<section id="servicios" class=" bg-[#FFFFFF] py-16 px-4 sm:px-6 lg:py-24 lg:px-8" aria-labelledby="services-heading">
+<section id="servicios" class=" bg-[#FFFFFF] py-22 px-6 sm:px-6 lg:py-24 lg:px-8" aria-labelledby="services-heading">
   <div class="mx-auto max-w-7xl">
     
-    <div class="mb-12 md:mb-16 max-w-2xl text-left">
-      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#2A5082] font-sans block mb-3">
+    <div class="mb-8 md:mb-16 max-w-2xl text-left">
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#2A5082] font-sans block mb-6">
         Nuestros Servicios
       </span>
       
-      <h2 id="services-heading" class="text-4xl sm:text-5xl font-bold text-[#1A1A1A] font-serif tracking-tight leading-none">
-        Lo que hacemos <br />
-        <span class="text-[#8A8A8A] italic font-normal inline-block mt-1">por ti</span>
+      <h2 id="services-heading" class="text-4xl sm:text-5xl font-bold text-[#1A1A1A] font-serif tracking-tight leading-none mb-8">
+        Lo que tenemos <br />
+        <span class="text-[#8A8A8A] italic font-normal inline-block mt-1">para ti</span>
       </h2>
       
-      <p class="mt-6 text-lg text-[#666666] font-sans leading-relaxed max-w-xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-      </p>
+      <p class=" text-base text-[#666666] font-sans font-normal leading-relaxed max-w-xl">
+Conoce nuestra variedad de servicios diseñados para facilitarte la vida. Te ofrecemos agua purificada, abastecimiento en pipas y renta de maquinaria pesada con el mejor trato y disponibilidad.      </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
         servicesData.map((service) => (
           <ServiceCard
