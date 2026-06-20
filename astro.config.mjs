@@ -12,5 +12,5 @@ export default defineConfig({
   },
   integrations: [// <-- Sin el punto y coma
   icon(), sitemap()],  
-  site:'https://montecito-temporal.com'
+  site:"https://el-montecito.vercel.app"
 });
