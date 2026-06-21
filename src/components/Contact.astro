@@ -1,7 +1,133 @@
-<section id="contacto" class="relative w-full h-screen min-h-150 overflow-hidden bg-white md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+<section id="contacto" class="relative w-full h-screen min-h-150 overflow-hidden bg-[#11161B] md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8 py-16 px-6">
 
-    <div>
-        <p>aca iran los contactos</p>
+    <div class=" mx-auto max-w-7xl">
+        <div class="mb-12 max-w-2xl text-left">
+            <span class="font-sans font-bold text-[#2A5082] text-xs tracking-[0.2em] uppercase mb-4">
+                CONTÁCTANOS
+            </span>
+
+            <h2 class="text-white text-4xl mt-2 font-bold font-serif tracking-tight select-none mb-3">
+                Estamos aquí para <br/>
+                <span  class="text-zinc-400 italic font-medium">ayudarte</span>
+            </h2>
+            
+            <span class="text-zinc-500 mt-2 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud exercitation.
+            </span>
+        </div>
+
+        <div class=" items-center justify-center  text-white font-sans">
+            <form id="contact-form" class="w-full max-w-md space-y-6">
+    
+                <div class="space-y-2">
+                <label for="nombre" class="block text-xs font-bold tracking-wider text-[#7A848D] uppercase">
+                    Nombre
+                </label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Iguano"
+                    class="w-full rounded-md border border-[#30363d] bg-[#1F252C] px-4 py-3.5 text-sm text-white placeholder-[#484f58] transition focus:border-[#32669C] focus:ring-1 focus:ring-[#32669C] focus:outline-none"
+                />
+                </div>
+
+                <div class="space-y-2">
+                <label for="correo" class="block text-xs font-bold tracking-wider text-[#7A848D] uppercase">
+                    Correo Electrónico
+                </label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="lorem@ipsum.com"
+                    class="w-full rounded-md border border-[#30363d] bg-[#1F252C] px-4 py-3.5 text-sm text-[#e6edf3] placeholder-[#484f58] transition focus:border-[#32669C] focus:ring-1 focus:ring-[#32669C] focus:outline-none"
+                />
+                </div>
+
+                <div class="space-y-2">
+                <label for="mensaje" class="block text-xs font-bold tracking-wider text-[#7A848D] uppercase">
+                    Mensaje
+                </label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+                    class="w-full resize-none rounded-md border border-[#30363d] bg-[#1F252C] px-4 py-3.5 text-sm text-[#e6edf3] placeholder-[#484f58] transition focus:border-[#32669C] focus:ring-1 focus:ring-[#32669C] focus:outline-none"
+                ></textarea>
+                </div>
+
+                <button
+                type="submit"
+                class="flex w-full items-center justify-center gap-2 rounded-full bg-[#2f5496] py-4 text-sm font-semibold text-white transition hover:bg-[#254378] active:scale-[0.98]"
+                >
+                <span>Enviar mensaje</span>
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="2" 
+                    stroke="currentColor" 
+                    class="h-4 w-4"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+                </button>
+            </form>
+            </div>
     </div>
 
 </section>
+
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    initForm();
+  }, { once: true });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    initForm();
+  });
+
+  function initForm() {
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      try {
+        const nombreInput = document.getElementById('nombre') as HTMLInputElement;
+        const correoInput = document.getElementById('correo') as HTMLInputElement;
+        const mensajeInput = document.getElementById('mensaje') as HTMLTextAreaElement;
+
+        const nombre = nombreInput?.value.trim();
+        const correo = correoInput?.value.trim();
+        const mensaje = mensajeInput?.value.trim();
+
+        if (!nombre || !correo || !mensaje) {
+          alert('Por favor, rellena todos los campos.');
+          return;
+        }
+
+        const datosContacto = {
+          nombre,
+          correo,
+          mensaje,
+          fecha: new Date().toLocaleString()
+        };
+
+        localStorage.setItem('contactoUsuario', JSON.stringify(datosContacto));
+
+        alert('Datos guardados');
+        form.reset();
+
+      } catch (error) {
+        console.error("Error al procesar el formulario:", error);
+      }
+    });
+  }
+</script>
