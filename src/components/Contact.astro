@@ -1,7 +1,47 @@
-<section id="contacto" class="relative w-full h-screen min-h-150 overflow-hidden bg-white md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+---
+import FormFooter from "./Forms/FormFooter.astro"
+import Wha from "./Contacts/Wha.astro"
+import NavBarFooter from "./Navigation/NavBarFooter.astro"
+---
 
-    <div>
-        <p>aca iran los contactos</p>
-    </div>
+<section id="contacto" class="relative px-6 py-22  w-full h-auto min-h-150 overflow-hidden bg-[#11161B] md:h-[80vh] md:w-[95%] md:max-w-7xl md:mx-auto md:rounded-lg md:my-8">
+
+        <p class="text-sm text-[#2A5082] font-sans font-semibold leading-relaxed mb-6 lg:w-[60%] lg:tracking-[0.15em] lg:uppercase lg:mb-4 lg:block">CONTÁCTANOS</p>
+
+        <h2 class="text-3xl text-white font-serif font-bold mb-8 lg:w-[60%] lg:text-5xl lg:leading-tight lg:mb-8 lg:pr-6">Haz tu pedido
+           <br> <span class="text-[#E8E8E8]/80 italic">Estamos listos para atenderte</span>
+        </h2>
+
+     <p class="text-base text-[#A1A7B0] font-sans mb-8 font-normal leading-relaxed lg:w-[60%] lg:text-base lg:mb-6 lg:pr-6">
+       ¿Tienes alguna duda sobre nuestros servicios de agua o maquinaria? Déjanos tus datos y nos comunicaremos contigo lo más
+        pronto posible para brindarte la mejor atención en toda la región de Oaxaca.</p>
+
+
+        <div class="flex flex-col gap-6 mb-8">
+          
+            <FormFooter/> 
+            <Wha/>
+           
+        </div>
+        
+        <div class="bg-[#11161B] w-full mt-12 mb-4 border-t border-[#7A848D]/20 py-10 gap-8">
+            <div>
+            <h3 class="text-lg text-white font-serif font-bold   ">El Montecito</h3>
+               <p class="text-sm text-[#A1A7B0] font-sans mb-8 font-normal leading-relaxed lg:w-[60%] lg:text-base lg:mb-6 lg:pr-6">
+       La mejor calidad</p>
+            </div>
+
+            <NavBarFooter/>
+
+
+        </div>
+
+            <div class="flex justify-center">
+
+         <p class="text-xs text-[#A1A7B0] font-sans items-center font-normal leading-relaxed lg:w-[60%] lg:text-base lg:mb-6 lg:pr-6">
+       ©2026 El Montecito. Todos los derechos reservados</p>
+
+</div>
+
 
 </section>

@@ -1,0 +1,94 @@
+---
+// Importa el componente de iconos que estés utilizando (ej. astro-icon)
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="bg-[#11161B]/80 p-2 w-full md:p-12 max-w-lg mx-auto rounded-xl">
+  
+  <!-- Formulario -->
+  <form id="contactForm" class="flex flex-col gap-5" >
+    
+    <!-- Nombre -->
+    <div>
+      <label for="nombre" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Nombre</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        required
+        pattern="^[a-zA-ZÁ-ÿ\\s]+$"
+        title="Ingresa un nombre válido (solo letras)"
+        placeholder="Ej. Juan Pérez"
+        class="w-full px-4 py-3 bg-[#1F252C] border border-[#2d313a] rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#3b82f6] focus:border-[#3b82f6] transition-all"
+      />
+    </div>
+
+    <!-- Correo Electrónico -->
+    <div>
+      <label for="email" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Correo Electrónico</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="tucorreo@gmail.com"
+        class="w-full px-4 py-3 bg-[#1F252C] border border-[#2d313a] rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#3b82f6] focus:border-[#3b82f6] transition-all"
+      />
+    </div>
+
+    <!-- Teléfono -->
+    <div>
+      <label for="telefono" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Teléfono</label>
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        required
+        pattern="[0-9]{10}"
+        title="Ingresa un número de 10 dígitos"
+        placeholder="Ej. 951 123 4567"
+        class="w-full px-4 py-3 bg-[#1F252C] border border-[#2d313a] rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#3b82f6] focus:border-[#3b82f6] transition-all"
+      />
+    </div>
+
+    <!-- Servicio a solicitar (Select) -->
+    <div>
+      <label for="servicio" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Servicio</label>
+      <select
+        id="servicio"
+        name="servicio"
+        required
+        class="w-full px-4 py-3 bg-[#1F252C] border border-[#2d313a] rounded-md text-white focus:outline-none focus:ring-1 focus:ring-[#3b82f6] focus:border-[#3b82f6] transition-all appearance-none cursor-pointer"
+      >
+        <option class="text-white"  value="" disabled selected>Selecciona una opción...</option>
+        <option class="text-white" value="garrafones">Garrafones de Agua</option>
+        <option class="text-white"  value="pipas">Pipas de Agua Potable</option>
+        <option class="text-white"  value="maquinaria">Renta de Volteo / Retroexcavadora</option>
+      </select>
+    </div>
+
+    <!-- Mensaje / Comentarios -->
+    <div>
+      <label for="comentarios" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Mensaje</label>
+      <textarea
+        id="comentarios"
+        name="comentarios"
+        rows="4"
+        required
+        minlength="10"
+        placeholder="Escribe aquí los detalles de tu pedido, ubicación o dudas..."
+        class="w-full px-4 py-3 bg-[#1F252C] border border-[#2d313a] rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#3b82f6] focus:border-[#3b82f6] transition-all resize-y"
+      ></textarea>
+    </div>
+
+    <!-- Botón de Envío -->
+    <!-- Nota: Dejé las clases de tu icono tal cual las pasaste -->
+    <button
+      type="submit"
+      class="mt-2 w-full py-3 bg-[#1E60A4] hover:bg-[#153a66] text-white font-medium rounded-full flex items-center justify-center gap-2 transition-colors duration-300 shadow-md"
+    >
+      Enviar mensaje
+      <Icon name="lucide:arrow-right" class="w-4 h-4 text-sm font-sans mt-1 text-white lg:w-5 lg:h-5" />
+    </button>
+  </form>
+</section>
