@@ -3,12 +3,10 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<section class="bg-[#11161B]/80 p-2 w-full md:p-12 max-w-lg mx-auto rounded-xl">
+<section class="bg-[#11161B]/80 p-2 w-full md:p-12 max-w-lg mx-auto rounded-xl lg:max-w-none lg:mx-0 lg:p-0 lg:bg-transparent">
   
-  <!-- Formulario -->
-  <form id="contactForm" class="flex flex-col gap-5" >
+  <form id="contactForm" class="flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:gap-y-6" >
     
-    <!-- Nombre -->
     <div>
       <label for="nombre" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Nombre</label>
       <input
@@ -23,7 +21,6 @@ import { Icon } from 'astro-icon/components';
       />
     </div>
 
-    <!-- Correo Electrónico -->
     <div>
       <label for="email" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Correo Electrónico</label>
       <input
@@ -36,7 +33,6 @@ import { Icon } from 'astro-icon/components';
       />
     </div>
 
-    <!-- Teléfono -->
     <div>
       <label for="telefono" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Teléfono</label>
       <input
@@ -51,7 +47,6 @@ import { Icon } from 'astro-icon/components';
       />
     </div>
 
-    <!-- Servicio a solicitar (Select) -->
     <div>
       <label for="servicio" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Servicio</label>
       <select
@@ -67,8 +62,7 @@ import { Icon } from 'astro-icon/components';
       </select>
     </div>
 
-    <!-- Mensaje / Comentarios -->
-    <div>
+    <div class="lg:col-span-2">
       <label for="comentarios" class="block text-xs font-semibold font-sans text-[#7A848D] mb-1 tracking-wide uppercase">Mensaje</label>
       <textarea
         id="comentarios"
@@ -81,11 +75,9 @@ import { Icon } from 'astro-icon/components';
       ></textarea>
     </div>
 
-    <!-- Botón de Envío -->
-    <!-- Nota: Dejé las clases de tu icono tal cual las pasaste -->
     <button
       type="submit"
-      class="mt-2 w-full py-3 bg-[#1E60A4] hover:bg-[#153a66] text-white font-medium rounded-full flex items-center justify-center gap-2 transition-colors duration-300 shadow-md"
+      class="mt-2 w-full py-3 bg-[#1E60A4] hover:bg-[#153a66] text-white font-medium rounded-full flex items-center justify-center gap-2 transition-colors duration-300 shadow-md lg:col-span-2 lg:w-fit lg:px-10 lg:mt-4"
     >
       Enviar mensaje
       <Icon name="lucide:arrow-right" class="w-4 h-4 text-sm font-sans mt-1 text-white lg:w-5 lg:h-5" />
